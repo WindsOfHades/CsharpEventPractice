@@ -9,8 +9,8 @@ namespace EventPractice
             FileDownloader downloader = new FileDownloader();
             FileUnpacker unpacker = new FileUnpacker();
             FileInstaller installer = new FileInstaller();
-            downloader.FileDownloaded += unpacker.OnFileDownloaded;
-            unpacker.FileUnpacked += installer.OnFileUnpacked;
+            downloader.FileDownloadedEvent += unpacker.OnFileDownloaded;
+            unpacker.FileUnpackedEvent += installer.OnFileUnpacked;
 
             downloader.DownloadFile("SomeFile");
         }
